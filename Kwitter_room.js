@@ -1,6 +1,7 @@
 var firebaseConfig = {
     apiKey: "AIzaSyC6tLd-URwgjEHJj12-DqWl5_hHN5m43tI",
     authDomain: "letschat-5889f.firebaseapp.com",
+    databaseURL: "https://letschat-5889f-default-rtdb.firebaseio.com",
     projectId: "letschat-5889f",
     storageBucket: "letschat-5889f.appspot.com",
     messagingSenderId: "227142299058",
@@ -35,4 +36,9 @@ document.getElementById("output").innerHTML += row;
     }
 getData();
 
+function logout(){
+    localStorage.removeItem("user_name");
+    localStorage.removeItem("room_name");
+    window.location="index.html";
+}
 
